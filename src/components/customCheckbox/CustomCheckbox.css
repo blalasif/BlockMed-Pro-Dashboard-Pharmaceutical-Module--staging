@@ -1,0 +1,49 @@
+/* styles.css */
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+
+.custom-checkbox span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #000000;
+  transition: background-color 0.2s ease, border 0.2s ease;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ span {
+  background: linear-gradient(155deg, #AD00FF 0%, #007EE0 60%, #AD00FF 100%);
+  border: none;
+}
+
+.custom-checkbox span:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 36.5%;
+  top: 15%;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ span:after {
+  display: block;
+}

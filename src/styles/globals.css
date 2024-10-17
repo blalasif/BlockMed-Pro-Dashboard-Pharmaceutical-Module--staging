@@ -1,0 +1,300 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*Global CSS*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  overflow-x: hidden !important;
+}
+
+/*Font Families Import*/
+@font-face {
+  font-family: "Inter";
+  src: local("Inter"), url("../fonts/Inter.ttf") format("truetype");
+}
+
+/*Root Element*/
+:root {
+  /* Fonts */
+  --inter: Inter, sans-serif;
+
+  /* Font-Sizes for Laptop */
+  --h1: 3.125rem; /*50px*/
+  --h2: 2.625rem; /*42px*/
+  --h3: 2rem; /*32px*/
+  --h4: 1.5rem; /*24px*/
+  --h5: 1.25rem; /*20px*/
+  --h6: 1rem; /*16px*/
+  --xl: 1.25rem; /*20px*/
+  --lg: 1rem; /*16px*/
+  --md: 0.875rem; /*14px*/
+  --sm: 0.75rem; /*12px*/
+
+  /*Colors*/
+  --white: #ffffff;
+  --black: "#141414";
+  --purple: "#AD00FF";
+  --red: "#C9311A";
+  --disabled-gray: "#D1D1D1";
+  --off-white: "f8f9fa";
+  --light-gray: "#ededed";
+  --dark-gray: "#969696";
+  --dark-blue: "#0d2a52";
+  --light-blue: "#EDF9FF";
+
+  /*Gradient Colors*/
+  --light-blue-gradient: linear-gradient(
+    155deg,
+    #ad00ff 0%,
+    #007ee0 60%,
+    #ad00ff 100%
+  );
+  --light-purple-gradient: linear-gradient(
+    183deg,
+    #ad00ff 5.38%,
+    #007ee0 195.6%
+  );
+  --text-light-blue-gradient: linear-gradient(155deg, #ad00ff 0%, #007ee0 80%);
+  --dark-blue-gradient: linear-gradient(150deg, #600faf 0%, #0061ac 80%);
+
+  --visa-gradient: linear-gradient(122deg, #4ca1af -26.29%, #c4e0e5 100%);
+  --mastercard-gradient: linear-gradient(150deg, #600faf 0%, #0061ac 80%);
+  --bc-gradient: linear-gradient(122deg, #2c535b -26.29%, #45ba8c 118.11%);
+  --dinersclub-gradient: linear-gradient(270deg, #4b79a1 0%, #283e51 100%);
+  --jcb-gradient: linear-gradient(44deg, #1f1c18 3.84%, #8e0e00 93.32%);
+  --unionpay-gradient: linear-gradient(270deg, #2c3e50 0%, #3498db 100%);
+  --discover-gradient: linear-gradient(43deg, #7b4397 -2.81%, #dc2430 100%);
+  --americanexpress-gradient: linear-gradient(
+    97deg,
+    #30cfd0 4.1%,
+    #330867 111.92%
+  );
+}
+
+/*Classes for gradients*/
+.text-light-blue-gradient {
+  background: var(--text-light-blue-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+}
+
+.bg-light-blue-gradient {
+  background: var(--light-blue-gradient);
+  background-size: 200% !important;
+  transition: background 1s ease !important;
+}
+
+.bg-light-blue-gradient:hover {
+  background-position: right center !important;
+}
+
+.bg-light-blue-gradient:disabled {
+  background: #d1d1d1 !important;
+}
+
+.outlined-button {
+  background: transparent;
+  border: 1px solid #969696;
+}
+
+.white-button {
+  background: var(--white);
+  border: 1px solid #ffffff;
+  color: var(--black);
+  font-family: var(--inter);
+  font-weight: 600;
+}
+
+.bg-dark-blue-gradient {
+  background: var(--dark-blue-gradient);
+}
+
+/*Cards gradient classes*/
+.bg-mastercard-gradient {
+  background: var(--mastercard-gradient);
+  background-size: 200% !important;
+  transition: background 1s ease !important;
+}
+
+.bg-visa-gradient {
+  background: var(--visa-gradient);
+  background-size: 200% !important;
+  transition: background 1s ease !important;
+}
+
+.bg-unionpay-gradient {
+  background: var(--unionpay-gradient);
+  background-size: 200% !important;
+  transition: background 1s ease !important;
+}
+
+.bg-americanexpress-gradient {
+  background: var(--americanexpress-gradient);
+  background-size: 200% !important;
+  transition: background 1s ease !important;
+}
+
+.bg-discover-gradient {
+  background: var(--discover-gradient);
+  background-size: 200% !important;
+  transition: background 1s ease !important;
+}
+
+.bg-dinersclub-gradient {
+  background: var(--dinersclub-gradient);
+  background-size: 200% !important;
+}
+
+.bg-bc-gradient {
+  background: var(--bc-gradient);
+  background-size: 200% !important;
+  transition: background 1s ease !important;
+}
+
+.bg-jcb-gradient {
+  background: var(--jcb-gradient);
+  background-size: 200% !important;
+}
+
+/*Global CSS*/
+.sidebar-screen-h {
+  height: calc(100vh - 50px);
+}
+
+/*Calendar*/
+.react-datepicker__header {
+  background: var(--light-purple-gradient) !important;
+  color: white !important;
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  color: white !important;
+}
+
+.react-datepicker {
+  border-radius: 12px !important;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+  border: none !important;
+}
+
+.react-datepicker__day--keyboard-selected {
+  background: var(--light-purple-gradient) !important;
+  color: var(--white) !important;
+}
+
+/*Pagination*/
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.page-item {
+  margin: 0rem;
+}
+
+.page-link {
+  display: block;
+  padding: 0rem 0.25rem 0rem 0.25rem;
+  background-color: white;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.page-item.active .page-link {
+  display: none;
+}
+
+.page-item.disabled .page-link {
+  color: #969696;
+  cursor: not-allowed;
+  background-color: white;
+}
+
+.selected > a {
+  display: none;
+}
+
+/*Global checkbox*/
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.custom-checkbox .checkbox {
+  display: none;
+}
+
+.custom-checkbox .checkmark {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: transparent;
+  margin-right: 6px;
+  border: 1.5px solid white;
+  position: relative;
+}
+
+.custom-checkbox .checkbox:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  top: 8.75%;
+  left: 9%;
+  width: 11px;
+  height: 11px;
+  background-color: white; /* Inner circle color */
+  border-radius: 50%;
+}
+
+/*Gradient checkbox*/
+.gradient-checkbox .checkbox {
+  display: none;
+}
+
+.gradient-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  width: 20px;
+}
+
+.gradient-checkbox .checkmark {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1.5px solid #0d2a52;
+  position: relative;
+}
+
+.gradient-checkbox .checkbox:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  top: 8.5%;
+  left: 9%;
+  width: 11px;
+  height: 11px;
+  background: var(--light-blue-gradient); /* Inner circle color */
+  border-radius: 50%;
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+  display: none;
+}
